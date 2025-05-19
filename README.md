@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Business Intelligence Dashboard
 
-## Getting Started
+Welcome to the Business Intelligence (BI) Dashboard, a web application built with Next.js and Material-UI (MUI) to provide an intuitive interface for visualizing and managing business data. This dashboard includes authentication, data tables, charts, and a responsive sidebar, designed to help users monitor key metrics and perform basic data operations.
 
-First, run the development server:
+## Table of Contents
+- [Features](#features)
+- [Setup Instructions](#setup-instructions)
+- [Design Considerations](#design-considerations)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+- **User Authentication**: Secure login and registration pages with persistent session management using local storage. Users can opt to "Keep me logged in" to avoid frequent logouts.
+- **Protected Routes**: Access to the dashboard is restricted to authenticated users, with automatic redirection to the login page if not authenticated.
+- **Responsive Sidebar**: A collapsible sidebar with navigation items (Dashboard, Analytics, Sales, Users, Reports, Settings) and a logout option, hidden on mobile views (below md breakpoint).
+- **Dashboard Overview**: Displays key metrics via cards, sales and user growth charts, category distribution charts, and a data table for order management.
+- **Data Table Management**: Interactive table with row deletion functionality via a context menu, including pagination logic to adjust pages when rows are deleted.
+- **Theme Toggle**: A header with a theme toggle button to switch between light and dark modes (integration with a theme provider is pending).
+- **Auto-Logout**: Inactivity-based logout after 60 seconds when "Keep me logged in" is unchecked, with event listeners for user activity (mousemove, keydown, click, scroll).
+- **Real-Time Feedback**: Success messages via snackbars after registration, enhancing user experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup Instructions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js (v18.x or later)
+- npm (v8.x or later)
+- Git (optional, for cloning the repository)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Installation
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/bi-dashboard.git
+   cd bi-dashboard
