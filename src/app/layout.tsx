@@ -10,7 +10,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Business Intelligence Dashboard",
   description: "A mini business intelligence tool with data visualization",
-  generator: "v0.dev",
 };
 
 export default function RootLayout({
